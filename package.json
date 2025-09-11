@@ -1,0 +1,20 @@
+{
+  "name": "express_sqlite_cache",
+  "version": "1.0.0",
+  "description": "Building High Performance Expressjs APIs with Nodejs Native SQLite Caching",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sqlite",
+    "expressjs",
+    "nodejs",
+    "caching"
+  ],
+  "author": "manisuec",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
