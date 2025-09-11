@@ -11,4 +11,6 @@ app.listen(PORT, () => {
   console.log(`  GET  http://localhost:${PORT}/api/posts`);
   console.log(`  GET  http://localhost:${PORT}/api/expensive`);
   console.log(`  GET  http://localhost:${PORT}/api/cache/stats`);
+  console.log('Use below endpoint to clear all cache:');
+  console.log(`  DELETE  curl -X DELETE http://localhost:${PORT}/api/cache`);
 });
