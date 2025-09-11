@@ -259,9 +259,12 @@ function createCacheMiddleware(cache, options = {}) {
     try {
       // Try to get from cache
       const cached = cache.get(cacheKey);
+
       if (cached) {
+        console.log('hit from cache...');
         res.set('X-Cache-Hit', 'true');
         res.set('X-Cache-Key', cacheKey);
+
         return res.json(cached);
       }
 
@@ -578,7 +581,7 @@ app.get('/', (req, res) => {
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Express SQLite Cache Demo</title>
+        <title>Express Native Nodejs SQLite Cache Demo</title>
         <style>
             body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
             .endpoint { background: #f5f5f5; padding: 10px; margin: 10px 0; border-radius: 5px; }
@@ -586,7 +589,7 @@ app.get('/', (req, res) => {
         </style>
     </head>
     <body>
-        <h1>Express SQLite Cache Demo</h1>
+        <h1>Express Native Nodejs SQLite Cache Demo</h1>
         <h2>API Endpoints (Cached)</h2>
         <div class="endpoint">
             <span class="method">GET</span> /api/users - Get all users
@@ -618,7 +621,8 @@ app.get('/', (req, res) => {
             <span class="method">DELETE</span> /api/cache - Clear all cache
         </div>
         
-        <p><strong>Note:</strong> First request will be slow, subsequent requests will be cached and fast!</p>
+        <p><strong>Note:</strong> 
+        <h3>First request will be slow, subsequent requests will be cached and fast!</h3>
         <p>Check response headers for cache status: <code>X-Cache-Hit</code> and <code>X-Cache-Key</code></p>
     </body>
     </html>
