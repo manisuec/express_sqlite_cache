@@ -22,6 +22,9 @@ Use below endpoint to clear all cache:
   DELETE  curl -X DELETE http://localhost:3000/api/cache
 ```
 
+## Read More
+
+Read in depth blog [High Performance Expressjs APIs with Native SQLite Caching](https://techinsights.manisuec.com/nodejs/expressjs-sqlite-caching)
 
 ## License
 
